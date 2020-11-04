@@ -1,0 +1,190 @@
+#dark-theme-1,
+#dark-theme-2,
+#dark-theme-3,
+#light-theme-1,
+#light-theme-2,
+#light-theme-3 {
+    margin: 20px;
+}
+
+#dark-theme-btn,
+#light-theme-btn {
+    display: none;
+}
+
+.theme-contorls {
+    position: relative;
+    margin-top: -90px;
+    /* negative value of footer height */
+    height: 150px;
+    clear: both;
+}
+
+#theme {
+    margin-top: -50px;
+    margin-bottom: 100px;
+}
+
+html {
+    /* outerbox,scrollbar-bg */
+    --color1: #191919;
+    /* scrollbar-thumb */
+    --color2: #383838;
+    /* scrollbar-hover */
+    --color3: #4D4D4D;
+    /* card border */
+    --color4: #000000;
+    /* main background-color,menu button bg */
+    --color5: #212121;
+    --left-side-icon: #212121;
+    /* hover */
+    --color6: #313030;
+    --active: #464646;
+    --white: #ffffff;
+}
+
+html[storedTheme='light'] {
+    /* outerbox,scrollbar-bg */
+    --color1: #EBEBEB;
+    /* scrollbar-thumb */
+    --color2: #c7c7c7;
+    /* scrollbar-hover */
+    --color3: #d8d8d8;
+    /* card border */
+    --color4: #c7c7c7;
+    --left-side-icon: #FCFCFC;
+    /* main background-color,menu button bg */
+    --color5: #FCFCFC;
+    /* hover */
+    --color6: #d6efff;
+    --active: #C6E3FF;
+    --white: #000000;
+}
+
+html[storedTheme='dark-1'] {
+    /* outerbox,scrollbar-bg */
+    --color1: #090B10;
+    /* scrollbar-thumb */
+    --color2: #1f2636;
+    /* scrollbar-hover */
+    --color3: #2c334d;
+    /* card border */
+    --color4: #1f2636;
+    /* main background-color,menu button bg */
+    --color5: #0F111A;
+    --left-side-icon: #0F111A;
+    /* hover */
+    --color6: #2c334d;
+    --active: #2b365c;
+    --white: #ffffff;
+}
+
+html[storedTheme='dark-3'] {
+    /* outerbox,scrollbar-bg */
+    --color1: #000000;
+    /* scrollbar-thumb */
+    --color2: #00182c;
+    /* scrollbar-hover */
+    --color3: #00213b;
+    /* card border */
+    --color4: #000d18;
+    /* main background-color,menu button bg */
+    --color5: #15181C;
+    --left-side-icon: #15181C;
+    /* hover */
+    --color6: #000a14;
+    --active: #001b31;
+    --white: #ffffff;
+}
+
+html[storedTheme='light-1'] {
+    /* outerbox,scrollbar-bg */
+    --color1: #ccefff;
+    /* scrollbar-thumb */
+    --color2: #65d3ff;
+    /* scrollbar-hover */
+    --color3: #77E6E7;
+    /* card border */
+    --color4: #1DA1F2;
+    --left-side-icon: #eff9fd;
+    /* main background-color,menu button bg */
+    --color5: #eff9fd;
+    /* hover */
+    --color6: #acdeff;
+    --active: #ffffff;
+    --white: #000000;
+}
+
+html[storedTheme='light-3'] {
+    /* outerbox,scrollbar-bg */
+    --color1: #b8ffd8;
+    /* scrollbar-thumb */
+    --color2: rgb(133, 255, 198);
+    /* scrollbar-hover */
+    --color3: #0eff4a71;
+    /* card border */
+    --color4: rgb(133, 255, 198);
+    --left-side-icon: #effdf2;
+    /* main background-color,menu button bg */
+    --color5: #effdf2;
+    /* hover */
+    --color6: #bfe6ff;
+    --active: #ffffff;
+    --white: #000000;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+@media (max-width: 700px) {
+    #dark-theme-1,
+    #dark-theme-2,
+    #dark-theme-3,
+    #light-theme-1,
+    #light-theme-2,
+    #light-theme-3 {
+        margin: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    #theme {
+        margin-top: -50px;
+        margin-bottom: 100px;
+    }
+    .theme-contorls {
+        position: relative;
+        margin-top: -90px;
+        /* negative value of footer height */
+        height: 150px;
+        clear: both;
+    }
+}
+
+@media (max-width: 320px) {
+    #dark-theme-1,
+    #dark-theme-2,
+    #dark-theme-3,
+    #light-theme-1,
+    #light-theme-2,
+    #light-theme-3 {
+        margin: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    #theme {
+        margin-top: -90px;
+        margin-bottom: 100px;
+    }
+    .theme-contorls {
+        position: relative;
+        margin-top: -90px;
+        /* negative value of footer height */
+        height: 150px;
+        clear: both;
+    }
+}

@@ -1,0 +1,199 @@
+.loader-wrapper {
+    position: relative;
+    height: 100%;
+    z-index: 1100;
+    background: var(--color5);
+    overflow: auto;
+    text-align: center;
+    scrollbar-color: var(--color3) var(--color1);
+    scrollbar-width: thin;
+    scrollbar-face-color: var(--color3);
+    scrollbar-track-color: var(--color1);
+    scrollbar-base-color: var(--color1);
+    scrollbar-3dlight-color: var(--color1);
+    scrollbar-highlight-color: var(--color1);
+    scrollbar-arrow-color: var(--color1);
+    scrollbar-shadow-color: var(--color1);
+    scrollbar-darkshadow-color: var(--color1);
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.loadWheel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    -moz-animation: loading-text-opacity 3s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 3s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 3s linear 0s infinite normal;
+    animation: loading-text-opacity 3s linear 0s infinite normal;
+}
+
+
+/* 450px */
+
+.Wheel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 75%;
+    width: 75%;
+}
+
+.controls {
+    position: relative;
+    margin-top: -90px;
+    /* negative value of footer height */
+    height: 150px;
+    clear: both;
+}
+
+.control-card {
+    margin: 15px;
+    width: 70px;
+    height: 70px;
+}
+
+.side-control-card {
+    margin-top: 35px;
+    width: 30px;
+    height: 30px;
+}
+
+#loading-text {
+    color: var(--white);
+    font-family: 'Roboto';
+    font-size: 15px;
+    /* font-weight: bold; */
+    /* opacity: 0; */
+    text-transform: uppercase;
+}
+
+#vedhase-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 20px;
+    text-align: center;
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: var(--white);
+    font-family: 'Roboto';
+    font-size: 20px;
+    /* font-weight: bold; */
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.blink {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    opacity: 0;
+}
+
+@keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-o-keyframes loading-text-opacity {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@media (max-width: 700px) {
+    #vedhase-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 20px;
+        text-align: center;
+        -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+        -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+        -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+        animation: loading-text-opacity 2s linear 0s infinite normal;
+        color: var(--white);
+        font-family: 'Roboto';
+        font-size: 15px;
+        opacity: 0;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 500px) {
+    .controls {
+        position: relative;
+        margin-top: -160px;
+        /* negative value of footer height */
+        height: 150px;
+        clear: both;
+    }
+}
