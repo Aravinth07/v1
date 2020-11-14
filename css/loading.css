@@ -90,6 +90,14 @@
     text-transform: uppercase;
 }
 
+.controls {
+    position: relative;
+    margin-top: -90px;
+    /* negative value of footer height */
+    height: 150px;
+    clear: both;
+}
+
 .blink {
     -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
     -o-animation: loading-text-opacity 2s linear 0s infinite normal;
@@ -177,5 +185,15 @@
         font-size: 15px;
         opacity: 0;
         text-transform: uppercase;
+    }
+}
+
+@media (max-width: 500px) {
+    .controls {
+        position: relative;
+        margin-top: -160px;
+        /* negative value of footer height */
+        height: 150px;
+        clear: both;
     }
 }
