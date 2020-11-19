@@ -218,6 +218,26 @@ var bgm = document.getElementById("bgm");
 
 //     }, 1000);
 // });
+jQuery(document).ready(function($) {
+    $('#vedhase-toggle').on('click', function() {
+        if ($(this).attr('data-click-state') == 1) {
+            $(this).attr('data-click-state', 0);
+            $('#play_svg').css('display', 'none');
+            $('#pause_svg').css('display', 'block');
+            const player = document.querySelector("lottie-player");
+            player.play();
+            bgm.play();
+        } else {
+            $(this).attr('data-click-state', 1);
+            $('#play_svg').css('display', 'block');
+            $('#pause_svg').css('display', 'none');
+            const player = document.querySelector("lottie-player");
+            player.pause();
+            bgm.pause();
+
+        }
+    });
+});
 
 function play() {
     $('#play_svg').css('display', 'none');
@@ -338,13 +358,16 @@ $(document).ready(function() {
         const player = document.querySelector("lottie-player");
         switch (x) {
             case "iamBtn":
+                $('.light0').css('display', 'block');
                 $('#pause_svg').css('display', 'none');
                 $('#play_svg').css('display', 'block');
                 $("#page_title").text("Aravinth");
+
                 $('#I-am-svg-rec').css('fill', 'var(--active)');
                 $('#expanded-I-am-svg-rec').css('fill', 'var(--active)');
                 break;
             case "OverviewBtn":
+                $('.light1').css('display', 'block');
                 player.stop();
                 bgm.pause();
                 bgm.currentTime = 0;
@@ -353,6 +376,7 @@ $(document).ready(function() {
                 $('#expanded-Overview-svg-rec').css('fill', 'var(--active)');
                 break;
             case "LottieFilesBtn":
+                $('.light2').css('display', 'block');
                 player.stop();
                 bgm.pause();
                 bgm.currentTime = 0;
@@ -361,6 +385,7 @@ $(document).ready(function() {
                 $('#expanded-LottieFiles-svg-rec').css('fill', 'var(--active)');
                 break;
             case "_3dBtn":
+                $('.light3').css('display', 'block');
                 player.stop();
                 bgm.pause();
                 bgm.currentTime = 0;
@@ -369,6 +394,7 @@ $(document).ready(function() {
                 $('#expanded-3d-svg-rec').css('fill', 'var(--active)');
                 break;
             case "FindBtn":
+                $('.light4').css('display', 'block');
                 player.stop();
                 bgm.pause();
                 bgm.currentTime = 0;
@@ -377,6 +403,7 @@ $(document).ready(function() {
                 $('#expanded-Find-svg-rec').css('fill', 'var(--active)');
                 break;
             case "SettingsBtn":
+                $('.light5').css('display', 'block');
                 player.stop();
                 bgm.pause();
                 bgm.currentTime = 0;
@@ -385,55 +412,60 @@ $(document).ready(function() {
                 $('#expanded-Settings-svg-rec').css('fill', 'var(--active)');
                 break;
             default:
+                $('.light0').css('display', 'block');
                 $("#page_title").text("Aravinth");
                 $('#I-am-svg-rec').css('fill', 'var(--active)');
                 $('#expanded-I-am-svg-rec').css('fill', 'var(--active)');
+
         }
         switch (y) {
             case "iamBtn":
 
+                $('.light0').css('display', 'none');
                 $('#I-am-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-I-am-svg-rec').css('fill', 'var(--color5)');
 
                 break;
             case "OverviewBtn":
-
+                $('.light1').css('display', 'none');
                 $('#Overview-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-Overview-svg-rec').css('fill', 'var(--color5)');
                 break;
             case "LottieFilesBtn":
-
+                $('.light2').css('display', 'none');
                 $('#LottieFiles-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-LottieFiles-svg-rec').css('fill', 'var(--color5)');
                 break;
             case "_3dBtn":
-
+                $('.light3').css('display', 'none');
                 $('#_3d-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-3d-svg-rec').css('fill', 'var(--color5)');
                 break;
             case "FindBtn":
-
+                $('.light4').css('display', 'none');
                 $('#Find-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-Find-svg-rec').css('fill', 'var(--color5)');
                 break;
             case "SettingsBtn":
-
+                $('.light5').css('display', 'none');
                 $('#Settings-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-Settings-svg-rec').css('fill', 'var(--color5)');
                 break;
             default:
-
+                $('.light0').css('display', 'none');
                 $('#I-am-svg-rec').css('fill', 'var(--color5)');
                 $('#expanded-I-am-svg-rec').css('fill', 'var(--color5)');
 
         }
 
     });
-
     var activeTab = $(event.target).attr('href');
     if (activeTab) {
         $('#myTab a[href="' + activeTab + '"]').tab('show');
     }
+
+
+
 
 });
 //default state
@@ -441,7 +473,7 @@ $(document).ready(function() {
     $("#page_title").text("Aravinth");
     $('#I-am-svg-rec').css('fill', 'var(--active)');
     $('#expanded-I-am-svg-rec').css('fill', 'var(--active)');
-
+    $('.light0').css('display', 'block');
     $('#close-icon').css('display', 'none');
     $('#menu-icon').css('display', 'block');
     $('#I-am-svg').css('display', 'block');
@@ -468,4 +500,11 @@ $(document).ready(function() {
     $('#sound_svg').css('display', 'block');
     $('#replay_svg').css('display', 'block');
 
+});
+
+//refresh page on browser resize
+$(window).bind('resize', function(e) {
+    console.log('window resized..');
+    this.location.reload(false); /* false to get page from cache */
+    /* true to fetch page from server */
 });
