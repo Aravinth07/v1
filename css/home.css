@@ -9,11 +9,6 @@
     margin-top: 70px;
 }
 
-.setting-mainbox {
-    text-align: center;
-    margin-top: 70px;
-}
-
 #up {
     margin-top: 30px;
     margin-left: 10px;
@@ -61,7 +56,6 @@
 .find-me {
     border-radius: 20px;
     overflow: hidden;
-    background-color: var(--color1);
     border: 1px solid var(--color4);
 }
 
@@ -87,7 +81,7 @@
 
 body {
     overflow: hidden;
-    background-color: var(--color5);
+    background-color: var(--color1);
 }
 
 
@@ -129,7 +123,7 @@ body {
 }
 
 .navbar {
-    height: 70px;
+    height: 70px
 }
 
 a {
@@ -292,67 +286,5 @@ a:hover {
     }
     #LeftsideBar.toggled #title {
         display: none;
-    }
-}
-
-
-/* ...................below bottom nav */
-
-#bottom-nav-device {
-    display: none;
-}
-
-#sign {
-    display: none;
-}
-
-#menu {
-    display: block;
-}
-
-@media (max-width: 414px) {
-    .setting-mainbox {
-        text-align: center;
-        margin-top: 40px;
-    }
-    #sign {
-        display: block;
-    }
-    #menu {
-        display: none;
-    }
-    .navbar {
-        height: 60px;
-    }
-    .light0,
-    .light1,
-    .light2,
-    .light3,
-    .light4,
-    .light5 {
-        display: none;
-    }
-    #bottom-nav-device {
-        display: block;
-    }
-    .list-group {
-        color: transparent;
-        text-decoration: none;
-        background-color: transparent;
-        border-color: transparent;
-        border: 0;
-    }
-    .list-group-item-custom {
-        padding-top: 0;
-        padding-left: 5;
-        padding-bottom: 3;
-        padding-right: 5;
-        background-color: transparent;
-        border: 0;
-    }
-    .list-group-item,
-    .list-group-item:hover,
-    .list-group-item.active {
-        background-color: transparent;
     }
 }
