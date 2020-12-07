@@ -279,11 +279,9 @@ function sound() {
 //controls..........................ends........................
 
 
-$(window).on("load", function() {
-    $.ready.then(function() {
-        $("#loader").css('display', 'none');
-    });
-});
+setTimeout(function() {
+    $("#loader").css('display', 'none');
+}, 5000);
 
 
 $("#up-btn").click(function() {
