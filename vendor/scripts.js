@@ -280,9 +280,9 @@ function sound() {
 
 
 $(window).on("load", function() {
-    $.ready.then(function() {
-        $("#loader").css('display', 'none');
-    });
+
+    $("#loader").css('display', 'none');
+
 });
 
 
